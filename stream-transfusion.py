@@ -22,7 +22,7 @@ transfusion_diagnosis =''
 if st.button(' Prediksi Mendonorkan Darah'):
     transfusion_prediction = transfusion_model.predict([[Recency, Frequency, Monetary, Time]])
     
-    if(transfusion_prediction[0]==0):
+    if(transfusion_prediction[0]==1):
         transfusion_diagnosis = 'Bersedia Mendonorkan Darah'
     else :
         transfusion_diagnosis = 'Tidak Bersedia Mendorokan Darah'
